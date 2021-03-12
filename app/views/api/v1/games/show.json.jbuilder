@@ -1,0 +1,1 @@
+json.partial! @game, as: :game
