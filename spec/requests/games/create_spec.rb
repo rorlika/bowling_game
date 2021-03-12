@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 
 require 'rails_helper'
 
 describe 'POST api/v1/games/', type: :request do
-  let(:game)            { Game.last }
+  let(:game) { Game.last }
 
   describe 'POST create' do
     it 'returns a successful response' do

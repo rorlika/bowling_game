@@ -18,14 +18,5 @@ RSpec.describe Game, type: :model do
       expect(current_game.score).to eq 0
       expect(current_game.frames).to eq [[]]
     end
-
-    it 'should cache' do
-      game
-      expect(Game).to receive(:find_by_id).and_call_original
-      Game.find_from_cache game.id
-
-      expect(Game).not_to receive(:find_by_id).and_call_original
-      Game.find_from_cache game.id
-    end
   end
 end

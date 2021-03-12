@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'GET api/v1/games/:id', type: :request do
-  let(:memory_store) { ActiveSupport::Cache.lookup_store(:memory_store) } 
+  let(:memory_store) { ActiveSupport::Cache.lookup_store(:memory_store) }
   let(:cache) { Rails.cache }
   let(:game) { Game.create }
 
